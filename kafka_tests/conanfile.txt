@@ -1,0 +1,10 @@
+[requires]
+catch2/2.13.7
+fmt/6.1.2
+librdkafka/1.8.2
+trompeloeil/41
+
+[generators]
+cmake
+cmake_find_package
+cmake_paths
