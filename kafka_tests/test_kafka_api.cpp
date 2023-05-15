@@ -28,6 +28,7 @@ TEST_CASE("produce and consume one message on topic", "[kafka]") {
   auto consumer = KafkaConsumer(broker, create_unique_group_id());
   consumer.subscribe({topic});
   // subscribe is asynchronous but "consume" will block until it connects.
+  // note from future matt: if there are no messages then this will block forever!
   [[maybe_unused]] auto ignore = consumer.consume_message();
 
   auto producer = KafkaProducer(broker);
