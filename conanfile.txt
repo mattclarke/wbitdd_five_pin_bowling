@@ -1,9 +1,0 @@
-[requires]
-catch2/3.3.1
-fmt/9.1.0
-librdkafka/1.8.2
-trompeloeil/41
-
-[generators]
-CMakeDeps
-CMakeToolchain

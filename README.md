@@ -12,9 +12,11 @@ From a terminal:
 
 From a second terminal:
 ```
+> git clone https://github.com/microsoft/vcpkg
+> ./vcpkg/bootstrap-vcpkg.sh
+> ./vcpkg/vcpkg install librdkafka catch2 fmt
 > mkdir _ninja
-> conan install . --output-folder=_ninja --build=missing
 > cd _ninja
-> cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
+> cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release
 > ninja && ./bin/test_kafka
 ```
