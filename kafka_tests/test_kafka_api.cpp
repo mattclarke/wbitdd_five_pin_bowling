@@ -1,3 +1,6 @@
+#include <catch2/catch_test_macros.hpp>
+#include <catch2/matchers/catch_matchers_floating_point.hpp>
+
 #include <chrono>
 #include <memory>
 #include <set>
@@ -6,7 +9,6 @@
 
 #include <unistd.h>
 
-#include <catch2/catch.hpp>
 #include <fmt/format.h>
 
 #include "kafka_consumer.h"

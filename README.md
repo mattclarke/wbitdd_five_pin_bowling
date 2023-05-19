@@ -12,8 +12,9 @@ From a terminal:
 
 From a second terminal:
 ```
-> mkdir _ninja && cd _ninja
-> conan install ..
-> cmake -G Ninja ..
+> mkdir _ninja
+> conan install . --output-folder=_ninja --build=missing
+> cd _ninja
+> cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
 > ninja && ./bin/test_kafka
 ```
